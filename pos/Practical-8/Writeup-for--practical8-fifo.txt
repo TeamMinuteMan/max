@@ -1,0 +1,36 @@
+Aim:- Write a program that implements FIFO page replacement algorithm.
+
+Description:- 
+
+FIFO (First In First Out) In this algorithm Operating System keeps track of all pages in the memory in a queue. 
+The page which enters the queue first is being placed in the front of the of the queue and so on.
+When a page needs to be replaced , operating system choose the first page to be selected for removal i.e first page will be the one which will be selected to go out first.
+
+Page Fault:- When we want to load the page on the memory, and the page is not already on the memory, then it is called a page fault.
+The page fault is also called page miss.
+
+Page Hit:- When we want to load the page on the memory, and the page is already available on memory, then it is called Page hit.
+
+Page:- A page (or memory page, or virtual page, or logical page) is a fixed-length contiguous block of virtual memory.
+
+Page Frame:- A frame (or memory frame, or physical page, or page frame) is a fixed-length block of RAM (i.e Physical Memory)
+
+Example:-
+Suppose frame size = 3
+No. of input = 6
+input = 1,2,3,2,4,1
+ 
+
+Frame
+/Pages->	1	2	3	2	4	1
+
+f1	1	1	1	1	4	4
+f2		2	2	2	2	1
+f3			3	3	3	3
+	Miss	Miss	Miss	Hit	Miss	Miss
+
+Total no. of Miss :- 5
+Total no. of Hit :- 1
+HIT Ratio=((Total no. of HIT)/(HIT+MISS) = 1/6 =1.667  
+
+Conclusion:- Hence, we implemented FIFO page replacement algorithm and found out the hit ratio. 
