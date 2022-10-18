@@ -1,0 +1,13 @@
+create or replace TRIGGER display_salary_changes
+after delete or insert or update on CUSTOMER1
+for each row
+when (new.id > 0)
+declare
+sal_fiff number;
+begin
+sal_fiff := :new.salary -:old.salary;
+dbms_output.put_line('old.salary: '|| :old.salary);
+dbms_output.put_line('new.salary: '|| :new.salary);
+dbms_output.put_line('Salary.diffrence :' ||sal_fiff);
+end;
+/
